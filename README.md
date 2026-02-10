@@ -1,4 +1,5 @@
-# valentino.html(https://github.com/user-attachments/files/25210098/index.html.txt)
+# valentino.html
+(https://github.com/user-attachments/files/25210098/index.html.txt)
 <!DOCTYPE html>
 <html lang="it">
 <head>

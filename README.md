@@ -1,1 +1,107 @@
-# valentino
+# valentino[index.html.txt](https://github.com/user-attachments/files/25210098/index.html.txt)
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Una domanda importante 💘</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      color: #e63946;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: #e63946;
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.2em;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(230,57,70,0.4);
+    }
+
+    .cuore {
+      font-size: 3em;
+      animation: battito 1s infinite;
+    }
+
+    @keyframes battito {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="cuore">❤️</div>
+    <h1>Vuoi essere il mio Valentino?</h1>
+    <p>Prometto sorrisi, abbracci infiniti e un sacco di amore 💕</p>
+    <button onclick="risposta()">Sì</button>
+  </div>
+
+  <script>
+    function risposta() {
+      document.body.innerHTML = `
+        <div style="
+          height:100vh;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          background:linear-gradient(135deg, #ff9a9e, #fad0c4);
+          font-family:'Segoe UI', sans-serif;
+          text-align:center;
+        ">
+          <div>
+            <h1 style="color:#e63946; font-size:2.5em;">
+              Sapevo che avresti detto sì 💘
+            </h1>
+            <p style="font-size:1.3em; color:#444;">
+              Non vedo l’ora di passare San Valentino con te ❤️
+            </p>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>

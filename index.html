@@ -1,84 +1,141 @@
-# valentino.html
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Una domanda importante 💘</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Per Emma 💎</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       height: 100vh;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      background: radial-gradient(circle at top, #ffd6e0, #ff9a9e);
       display: flex;
       justify-content: center;
       align-items: center;
       font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
     }
 
     .card {
       background: white;
-      padding: 40px;
-      border-radius: 20px;
+      padding: 32px 26px;
+      border-radius: 26px;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      animation: fadeIn 1.5s ease;
+      width: 90%;
+      max-width: 380px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+      animation: fadeIn 1.6s ease;
+      position: relative;
+      z-index: 2;
     }
 
     h1 {
-      color: #e63946;
-      font-size: 2.2em;
+      color: #c9184a;
+      font-size: 1.9em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      color: #555;
+      font-weight: normal;
       margin-bottom: 20px;
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: #444;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
+      line-height: 1.5;
     }
 
     button {
-      background: #e63946;
+      background: linear-gradient(135deg, #c9184a, #ff4d6d);
       color: white;
       border: none;
-      padding: 15px 40px;
+      padding: 14px 38px;
       font-size: 1.2em;
       border-radius: 50px;
       cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 20px rgba(201,24,74,0.4);
+      transition: transform 0.2s;
     }
 
-    button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 5px 15px rgba(230,57,70,0.4);
+    button:active {
+      transform: scale(0.95);
     }
 
-    .cuore {
-      font-size: 3em;
-      animation: battito 1s infinite;
+    .icon {
+      font-size: 3.5em;
+      margin-bottom: 10px;
+      animation: glow 1.5s infinite alternate;
     }
 
-    @keyframes battito {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+    @keyframes glow {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(35px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* LUCI / SCINTILLE */
+    .sparkle {
+      position: absolute;
+      color: rgba(255,255,255,0.8);
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-10vh);
+        opacity: 1;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <div class="card">
-    <div class="cuore">❤️</div>
-    <h1>Vuoi essere il mio Valentino?</h1>
-    <p>Prometto sorrisi, abbracci infiniti e un sacco di amore 💕</p>
+    <div class="icon">💎✨</div>
+    <h1>Emma</h1>
+    <h2>ho una domanda per te</h2>
+
+    <p>
+      Se tu fossi un diamante,<br>
+      io vorrei essere la luce che lo fa brillare.<br><br>
+      Questo San Valentino…<br>
+      <strong>vuoi essere il mio diamante<br>
+      e lasciare che io sia la tua luce?</strong>
+    </p>
+
     <button onclick="risposta()">Sì</button>
   </div>
 
   <script>
+    // Scintille luminose
+    for (let i = 0; i < 18; i++) {
+      const sparkle = document.createElement("div");
+      sparkle.className = "sparkle";
+      sparkle.innerHTML = "✨";
+      sparkle.style.left = Math.random() * 100 + "vw";
+      sparkle.style.animationDuration = (6 + Math.random() * 6) + "s";
+      sparkle.style.fontSize = (14 + Math.random() * 18) + "px";
+      document.body.appendChild(sparkle);
+    }
+
     function risposta() {
       document.body.innerHTML = `
         <div style="
@@ -86,16 +143,26 @@
           display:flex;
           justify-content:center;
           align-items:center;
-          background:linear-gradient(135deg, #ff9a9e, #fad0c4);
+          background:radial-gradient(circle at top, #ffd6e0, #ff9a9e);
           font-family:'Segoe UI', sans-serif;
           text-align:center;
+          padding:20px;
         ">
-          <div>
-            <h1 style="color:#e63946; font-size:2.5em;">
-              Sapevo che avresti detto sì 💘
+          <div style="
+            background:white;
+            padding:34px;
+            border-radius:28px;
+            box-shadow:0 20px 45px rgba(0,0,0,0.25);
+            animation: fadeIn 1.4s ease;
+          ">
+            <h1 style="color:#c9184a; font-size:2.2em;">
+              Allora è deciso 💎❤️
             </h1>
-            <p style="font-size:1.3em; color:#444;">
-              Non vedo l’ora di passare San Valentino con te ❤️
+            <p style="font-size:1.25em; color:#444; line-height:1.5;">
+              Tu sei il mio diamante.<br>
+              Io sarò la tua luce.<br><br>
+              Questo San Valentino<br>
+              brillerà solo per noi ✨
             </p>
           </div>
         </div>
